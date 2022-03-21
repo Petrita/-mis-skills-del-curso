@@ -1,0 +1,50 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:646303818657:function:ebd80fbe-2a68-4bc3-8678-33739145aa13:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:646303818657:function:ebd80fbe-2a68-4bc3-8678-33739145aa13:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:646303818657:function:ebd80fbe-2a68-4bc3-8678-33739145aa13:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:646303818657:function:ebd80fbe-2a68-4bc3-8678-33739145aa13:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "es-US": {
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa abre hola mundo",
+            "hola",
+            "ayuda"
+          ],
+          "keywords": [],
+          "name": "glosario inf",
+          "summary": "Sample Short Description"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}

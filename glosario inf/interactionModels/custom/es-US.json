@@ -1,0 +1,103 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi glosario",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MiGlosarioIntent",
+          "slots": [
+            {
+              "name": "concepto",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "explicame lo que {concepto} es",
+            "cuentame sobre {concepto}",
+            "que es una {concepto}",
+            "que es un {concepto}",
+            "cual es el significado de {concepto}",
+            "que es {concepto}",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "MiGlosarioIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "concepto",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.297736768381.1281155564685"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.297736768381.1281155564685.1431384732004",
+                  "values": [
+                    "Bus",
+                    "Aplicación",
+                    "Acceso Directo",
+                    "Pirata",
+                    "Arbol",
+                    "Byte",
+                    "Microprocesador",
+                    "API",
+                    "Pixel"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Slot.Validation.297736768381.1281155564685.1431384732004",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Lo siento, {concepto} no está en mi vocabulario, por favor intentarlo de nuevo"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.297736768381.1281155564685",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "hola, disculpa, que quieres decir?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "3"
+}
